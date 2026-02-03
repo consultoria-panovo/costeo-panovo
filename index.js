@@ -20,7 +20,7 @@ app.get("/mm60", async (req, res) => {
     const pool = await sql.connect(config);
 
     const result = await pool.request().query(`
-      SELECT MATNR, WERKS, MAKTX, LAEDA, MTART, MATKL, MEINS, PREIS 
+      SELECT MATNR, WERKS, MAKTX, LAEDA, MTART, MATKL, MEINS, PREIS, WAERS
       FROM MM60
     `);
 
